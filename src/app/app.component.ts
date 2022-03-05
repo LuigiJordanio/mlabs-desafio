@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ConsoleLogService } from './@shared/services/console-log.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'mlabs-desafio';
+
+  constructor(private consoleLog: ConsoleLogService) {}
+
+  ngOnInit() {
+    this.consoleLog.showLogo();
+  }
 }
