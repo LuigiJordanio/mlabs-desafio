@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { ChildrenRequired } from 'src/app/@shared/decorators/children-required.decorator';
 
 @Component({
   selector: 'mlb-card',
@@ -6,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mlb-card.component.scss']
 })
 export class MlbCardComponent implements OnInit {
+
+  @ChildrenRequired(true)
+  @ViewChild('content') content:any;
+
+
+  @Input('mlb-title') title?:string;
 
   constructor() { }
 

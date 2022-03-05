@@ -1,1 +1,4 @@
-<p>mlb-button works!</p>
+<button class="mlb-button mlb-button--{{category}}" #content>
+    <ng-content *ngIf="!isLoading"></ng-content>
+    <i class="fa-solid fa-spinner fa-spin fa-fw" *ngIf="isLoading"></i>
+</button>

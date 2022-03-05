@@ -1,0 +1,43 @@
+.#{$PREFIX-COMPONENTS}-button-social {
+  width: 33px;
+  height: 33px;
+  border: 1px solid;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  &--enabled {
+    background-color: $white-full-lighter;
+    border-color: $gray-lighter-1;
+    color: $black-lighter-1;
+  }
+
+  &:hover {
+    background-color: $brand-orange-lighter-1;
+    background: linear-gradient(135deg, #ef9f2e 25%, #e02b4b 105.56%);
+    border-color: $brand-orange-dark-2;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &--selected,
+  &--selected:hover {
+    border-color: $brand-orange-dark-2;
+    background: linear-gradient(135deg, #ef9f2e 25%, #e02b4b 105.56%);
+    color: $white-full-lighter;
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: initial;
+  }
+
+  &--disabled,
+  &--disabled:hover {
+    border-color: $gray-lighter-1;
+    background-color: $gray-lighter-2;
+    background: $gray-lighter-2;
+    color: $gray-dark-1;
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: initial;
+  }
+}

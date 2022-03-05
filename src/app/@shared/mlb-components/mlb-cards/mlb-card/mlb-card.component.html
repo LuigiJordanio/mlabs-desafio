@@ -1,1 +1,8 @@
-<p>mlb-card works!</p>
+<div class="mlb-card">
+    <div class="mlb-card__header" *ngIf="title">
+      <h5 class="mlb-card__header__title">{{title}}</h5>
+    </div>
+    <div class="mlb-card__body" #content>
+      <ng-content></ng-content>
+    </div>
+</div>

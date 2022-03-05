@@ -1,0 +1,33 @@
+.#{$PREFIX-COMPONENTS}-button{
+  min-width: 184px;
+  border: none;
+  font-weight: 500;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 16px;
+  border-radius: 4px;
+
+  &--primary{
+    background-color: $brand-blue-standard;
+    color: $white-full-lighter;
+  }
+
+  &--secondary{
+    background-color: $brand-orange-standard;
+    color: $white-full-lighter;
+  }
+
+  &--tertiary{
+    background-color: transparent;
+    color: $brand-blue-standard;
+    min-width: 0;
+  }
+
+  &--outline{
+    color: $brand-blue-standard;
+    background-color: $white-full-lighter;
+    border: 1px solid $brand-blue-standard;
+  }
+}

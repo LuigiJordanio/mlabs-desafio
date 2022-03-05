@@ -1,15 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, ViewChild } from '@angular/core';
+import { ChildrenRequired } from 'src/app/@shared/decorators/children-required.decorator';
+import { categoryButton, typeButton } from '../mlb-button.types';
 
 @Component({
   selector: 'mlb-button',
   templateUrl: './mlb-button.component.html',
-  styleUrls: ['./mlb-button.component.scss']
+  styleUrls: ['./mlb-button.component.scss'],
+
 })
-export class MlbButtonComponent implements OnInit {
+export class MlbButtonComponent {
 
-  constructor() { }
+  @ChildrenRequired()
+  @ViewChild('content') content:any;
 
-  ngOnInit(): void {
-  }
+  @Input('mlb-category') category:categoryButton = 'tertiary';
+
+  @Input('mlb-type') type:typeButton = 'button';
+
+  @Input('mlb-is-loading') isLoading:boolean = false;
+
+  constructor() {}
+
+
 
 }
