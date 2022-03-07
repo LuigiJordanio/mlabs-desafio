@@ -1,5 +1,25 @@
 .#{$PREFIX-COMPONENTS}-card {
   background-color: $white-full-lighter;
   border-radius: 4px;
-  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid $gray-lighter-3;
+
+  &__header {
+    padding: 0 8px;
+    border-bottom: 1px solid $gray-lighter-3;
+    height: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    &__title {
+      font-size: 16px;
+    }
+  }
+
+  &__body {
+    padding: 8px;
+  }
 }

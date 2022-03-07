@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-mlb-form-input-droppable',
+  selector: 'mlb-form-input-droppable',
   templateUrl: './mlb-form-input-droppable.component.html',
   styleUrls: ['./mlb-form-input-droppable.component.scss']
 })

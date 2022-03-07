@@ -1,15 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { typeInput } from '../mlb-button.types';
 
 @Component({
-  selector: 'app-mlb-form-input',
+  selector: 'mlb-form-input',
   templateUrl: './mlb-form-input.component.html',
   styleUrls: ['./mlb-form-input.component.scss']
 })
 export class MlbFormInputComponent implements OnInit {
 
-  constructor() { }
+  @Input('mlb-type') type: typeInput = 'text';
 
-  ngOnInit(): void {
+  @Input('mlb-placeholder') placeholder?: string;
+
+  public readonly icon = {
+    date: 'calendar',
+    time: 'clock'
   }
 
+  constructor() { }
+
+  ngOnInit(): void { }
 }

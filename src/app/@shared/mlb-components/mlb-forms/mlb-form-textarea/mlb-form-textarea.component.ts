@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-mlb-form-textarea',
+  selector: 'mlb-form-textarea',
   templateUrl: './mlb-form-textarea.component.html',
   styleUrls: ['./mlb-form-textarea.component.scss']
 })

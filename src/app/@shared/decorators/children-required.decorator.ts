@@ -7,7 +7,6 @@ export function ChildrenRequired(warnOptional?: boolean) {
     const consoleLogService: ConsoleLogService = new ConsoleLogService();
 
     target[NG_AFTER_VIEW_INIT] = function () {
-      console.log(this[key].nativeElement.innerText);
 
       if (!this[key].nativeElement.innerText && !warnOptional) {
         throw new Error(`O componente precisa de conteudo interno`);
