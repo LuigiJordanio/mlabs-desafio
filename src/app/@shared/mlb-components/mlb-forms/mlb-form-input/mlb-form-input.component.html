@@ -1,3 +1,4 @@
-<div class="mlb-form-input">
-  <!-- <input [type]="type" [attr .placeholder]="placeholder" /> -->
-</div>
+<label class="mlb-form-input" [for]="id || name" >
+  <i class="fa-solid  {{icon}}" *ngIf="icon"></i>
+  <input [type]="type" class="mlb-form-input__input" [placeholder]="placeholder" [id]="id || name">
+</label>

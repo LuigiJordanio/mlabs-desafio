@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { typeInput } from '../mlb-button.types';
+import { typeInput } from '../mlb-form.types';
 
 @Component({
   selector: 'mlb-form-input',
@@ -8,16 +8,29 @@ import { typeInput } from '../mlb-button.types';
 })
 export class MlbFormInputComponent implements OnInit {
 
+
+
   @Input('mlb-type') type: typeInput = 'text';
 
-  @Input('mlb-placeholder') placeholder?: string;
+  @Input('mlb-placeholder') placeholder!: string;
 
-  public readonly icon = {
-    date: 'calendar',
-    time: 'clock'
+  @Input('mlb-id') id!: string;
+
+  @Input('mlb-name') name!: string;
+
+  private _icon!: string;
+
+  @Input('mlb-icon') set icon(value: string) {
+    if (!value.startsWith('fa-')) throw new Error(`Apenas ícones da biblioteca fontawesome são aceitos`);
+    this._icon = value;
   }
 
-  constructor() { }
+  get icon() {
+    return this._icon;
+  }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    // this.id = this.id ?? this.name;
+  }
+
 }

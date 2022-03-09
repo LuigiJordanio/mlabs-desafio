@@ -8,4 +8,4 @@ import { MlbLayoutHeaderComponent } from './mlb-layout-header/mlb-layout-header.
   imports: [CommonModule],
   exports: [MlbLayoutHeaderComponent, MlbLayoutFooterComponent],
 })
-export class MlbLayoutsModule {}
+export class MlbLayoutsModule { }

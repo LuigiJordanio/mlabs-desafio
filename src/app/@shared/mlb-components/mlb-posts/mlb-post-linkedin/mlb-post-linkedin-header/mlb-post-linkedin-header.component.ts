@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Required } from 'src/app/@shared/decorators/required.decorator';
 
 @Component({
   selector: 'mlb-post-linkedin-header',
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MlbPostLinkedinHeaderComponent implements OnInit {
 
-  constructor() { }
+  @Required()
+  @Input('mlb-name') name!:string;
+
+  @Input('mlb-date') date!:Date;
+
+  @Input('mlb-description') description?:string;
 
   ngOnInit(): void {
   }

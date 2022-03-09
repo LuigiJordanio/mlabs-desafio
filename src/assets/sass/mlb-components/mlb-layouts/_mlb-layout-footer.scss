@@ -1,0 +1,10 @@
+.mlb-layout-footer{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;
+  background-color: $white-full-lighter;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}

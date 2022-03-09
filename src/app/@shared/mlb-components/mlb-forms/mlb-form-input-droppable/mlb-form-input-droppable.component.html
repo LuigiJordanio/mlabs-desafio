@@ -1,1 +1,17 @@
-<p>mlb-form-input-droppable works!</p>
+<label
+  class="mlb-form-input-droppable"
+  [class.mlb-form-input-droppable--dragenter]="isDragenter"
+  draggable="true"
+  (drop)="dropedFile($event)"
+  (dragover)="draggedOverFile($event)"
+  [for]="name"
+  (dragleave)="dragToggle()"
+  (dragenter)="dragToggle()"
+>
+  <i class="fa-solid fa-cloud-arrow-up mlb-form-input-droppable__icon"></i>
+  <ng-content></ng-content>
+  <label [for]="name" class="mlb-button mlb-button--outline">
+    Pesquisar imagens
+  </label>
+  <input type="file" [id]="name" hidden #fileInput [multiple]="false" />
+</label>

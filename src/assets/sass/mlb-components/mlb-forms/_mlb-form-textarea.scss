@@ -1,0 +1,27 @@
+.mlb-form-textarea {
+  position: relative;
+  &__textarea {
+    width: 100%;
+    border: 1px solid $gray-standard;
+    border-radius: 4px;
+    font-size: 14px;
+    resize: none;
+    padding: 8px 16px;
+    box-sizing: border-box;
+    font-weight: 500;
+  }
+
+  &__emoji {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-items: flex-end;
+    top: 16px;
+    gap: 8px;
+    right: 16px;
+
+    &__icon{
+      cursor: pointer;
+    }
+  }
+}

@@ -1,1 +1,4 @@
-<p>mlb-profile works!</p>
+<div class="mlb-profile">
+  <img [src]="profile.image || 'assets/img/default/profile.png'" [alt]="profile.name" class="mlb-profile__picture">
+  <span class="mlb-profile__name">{{profile.name}}</span>
+</div>

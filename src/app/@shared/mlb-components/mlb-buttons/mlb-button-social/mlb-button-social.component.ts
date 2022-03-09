@@ -18,7 +18,7 @@ export class MlbButtonSocialComponent implements OnInit {
 
   public status!:string;
 
-  constructor() { }
+
 
   ngOnInit(): void {
 

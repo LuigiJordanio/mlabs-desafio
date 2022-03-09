@@ -17,6 +17,8 @@ export class MlbButtonComponent {
 
   @Input('mlb-type') type:typeButton = 'button';
 
+  @Input('mlb-id') id!:string;
+
   @Input('mlb-is-loading') isLoading:boolean = false;
 
   constructor() {}

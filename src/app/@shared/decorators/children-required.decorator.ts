@@ -18,8 +18,9 @@ export function ChildrenRequired(warnOptional?: boolean) {
         while(!parentComponentElement.tagName.toLowerCase().startsWith('mlb-'))
           parentComponentElement = parentComponentElement.parentElement;
 
+        const componentName = parentComponentElement.tagName.toLowerCase();
 
-        consoleLogService.warning(`O componente ${parentComponentElement.tagName.toLowerCase()} está sem conteudo`);
+        consoleLogService.warning(`O componente ${componentName} está sem conteudo`);
       }
     };
   };

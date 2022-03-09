@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ScheduleListComponent implements OnInit {
 
-  constructor() { }
+
 
   ngOnInit(): void {
   }

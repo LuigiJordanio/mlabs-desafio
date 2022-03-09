@@ -11,10 +11,9 @@ export class MlbCardComponent implements OnInit {
   @ChildrenRequired(true)
   @ViewChild('content') content:any;
 
-
   @Input('mlb-title') title?:string;
 
-  constructor() { }
+
 
   ngOnInit(): void {
   }

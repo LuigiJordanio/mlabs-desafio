@@ -1,0 +1,29 @@
+.mlb-form-input-droppable {
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed $gray-dark-1;
+
+  &__icon{
+    font-size: 32px;
+    color: $gray-dark-1;
+  }
+
+  &__description {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: $gray-dark-1;
+    margin-top: 12px;
+    margin-bottom: 32px;
+  }
+
+  &--dragenter{
+    border-width: 3px;
+  }
+}

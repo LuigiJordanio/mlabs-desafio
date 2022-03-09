@@ -1,1 +1,12 @@
-<p>mlb-post-linkedin-header works!</p>
+<div class="mlb-post-linkedin__header">
+  <div class="mlb-post-linkedin__header__profile">
+    <img src="assets/img/social-logo/linkedin-post.svg" alt="" />
+    <div class="mlb-post-linkedin__header__profile__info">
+      <h3 class="mlb-post-linkedin__header__profile__info__name">{{ name }}</h3>
+      <h5 class="mlb-post-linkedin__header__profile__info__date">{{ date | date: "dd 'de' MMMM" }}</h5>
+    </div>
+  </div>
+  <p class="mlb-post-linkedin__header__description">
+    {{description}}
+  </p>
+</div>

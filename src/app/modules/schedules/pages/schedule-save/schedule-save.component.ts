@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ScheduleSaveComponent implements OnInit {
 
-  constructor() { }
+
 
   ngOnInit(): void {
   }

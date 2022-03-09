@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Required } from 'src/app/@shared/decorators/required.decorator';
+import { Post, sizesPost } from '../../mlb-post.types';
 
 @Component({
   selector: 'mlb-post-instagram',
@@ -7,7 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MlbPostInstagramComponent implements OnInit {
 
-  constructor() { }
+
+
+
+  @Input('mlb-size') size:sizesPost = 'standard';
+
+  @Required()
+  @Input('mlb-post') post!:Post;
 
   ngOnInit(): void {
   }

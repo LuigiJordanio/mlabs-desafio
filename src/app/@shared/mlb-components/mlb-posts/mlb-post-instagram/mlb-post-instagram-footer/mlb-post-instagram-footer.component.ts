@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'mlb-post-instagram-footer',
@@ -7,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MlbPostInstagramFooterComponent implements OnInit {
 
-  constructor() { }
+
+
+  @Input('mlb-description') description?:string;
 
   ngOnInit(): void {
   }
