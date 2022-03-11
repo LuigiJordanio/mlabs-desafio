@@ -1,4 +1,5 @@
 import { SafeUrl } from "@angular/platform-browser";
+import { Status } from "./status.types";
 
 export interface Post {
   id?:number;
@@ -6,7 +7,7 @@ export interface Post {
   media:string | SafeUrl;
   text:string;
   publication_date:string | Date;
-  status_key:number;
+  status_key:number | Status | undefined;
 }
 
 export interface PostDto {

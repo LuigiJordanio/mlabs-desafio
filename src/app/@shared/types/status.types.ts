@@ -3,3 +3,11 @@ export interface Status {
   name:string;
   color:string;
 }
+
+
+
+export interface StatusDto {
+  default:{
+    data:Status[]
+  }
+}

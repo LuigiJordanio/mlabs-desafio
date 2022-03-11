@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import * as posts from '../../../__mock__/schedules.json';
 import { Post, PostDto } from '../types/post.types';
 import { SocialNetworkService } from './social-network.service';
+import { StatusService } from './status.service';
 
 @Injectable({
   providedIn: 'root',
@@ -11,7 +12,7 @@ export class PostService {
   public listPost: Post[];
   public listPostSketch?: Post[];
 
-  constructor(private socialNetworkService: SocialNetworkService) {
+  constructor(private socialNetworkService: SocialNetworkService, private statusService:StatusService) {
     this.listPost = (posts as unknown as PostDto).default.data;
   }
 
@@ -34,7 +35,8 @@ export class PostService {
       return {
         ...post,
         post: new Date(post.publication_date).toLocaleDateString(),
-        social_network_key: this.socialNetworkService.get(post.social_network_key) ?? []
+        social_network_key: this.socialNetworkService.get(post.social_network_key) ?? [],
+        status_key: this.statusService.get(post.status_key)
       };
     })
   }

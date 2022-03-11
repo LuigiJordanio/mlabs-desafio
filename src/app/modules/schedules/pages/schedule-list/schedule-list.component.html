@@ -42,7 +42,7 @@
         <td>
           <mlb-button (click)="showDetail(post, $event)">Preview</mlb-button>
         </td>
-        <td>{{ post.status_key }}</td>
+        <td><mlb-status [mlb-status]="post.status_key"></mlb-status></td>
       </tr>
     </mlb-table>
   </div>

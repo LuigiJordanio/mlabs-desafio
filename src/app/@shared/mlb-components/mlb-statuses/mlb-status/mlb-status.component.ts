@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Required } from 'src/app/@shared/decorators/required.decorator';
-import { Status } from '../mlb-status.types';
 
 @Component({
   selector: 'mlb-status',
@@ -12,9 +11,11 @@ export class MlbStatusComponent implements OnInit {
 
 
   @Required()
-  @Input('mlb-status') status!:Status;
+  @Input('mlb-status') status!:any;
 
   ngOnInit(): void {
+
+    console.log(this.status)
   }
 
 }
