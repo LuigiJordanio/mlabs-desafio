@@ -1,0 +1,17 @@
+.mlb-status {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  &__icon {
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+  }
+  &__title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: #4f4f4f;
+  }
+}

@@ -3,6 +3,7 @@ import localePt from '@angular/common/locales/pt';
 import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ConsoleLogService } from './@shared/services/console-log.service';
+import { PostService } from './@shared/services/post.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -18,6 +19,7 @@ registerLocaleData(localePt);
   ],
   providers: [
     ConsoleLogService,
+    PostService,
     { provide: LOCALE_ID, useValue: 'pt' }
   ],
   bootstrap: [AppComponent]

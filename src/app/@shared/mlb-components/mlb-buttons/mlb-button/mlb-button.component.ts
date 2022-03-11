@@ -13,11 +13,15 @@ export class MlbButtonComponent {
   @ChildrenRequired()
   @ViewChild('content') content:any;
 
+  @Input('mlb-disabled') disabled:boolean = false;
+
   @Input('mlb-category') category:categoryButton = 'tertiary';
 
   @Input('mlb-type') type:typeButton = 'button';
 
   @Input('mlb-id') id!:string;
+
+  @Input('mlb-is-link') isLink!:boolean;
 
   @Input('mlb-is-loading') isLoading:boolean = false;
 

@@ -1,4 +1,5 @@
-import { Component, ElementRef, Input, ViewChild } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 import { Required } from 'src/app/@shared/decorators/required.decorator';
 
 @Component({
@@ -18,22 +19,36 @@ export class MlbFormInputDroppableComponent {
 
   @Input('mlb-type-files') typeFiles?: string[] | string;
 
+  @Output('mlb-select-image') selectImage: EventEmitter<string> = new EventEmitter<string>();
+
   public isDragenter: boolean = false;
 
-
+  constructor(private domSanitizer: DomSanitizer){}
 
   public dropedFile(event: DragEvent): void {
+
     event.preventDefault();
-    const filesReceived = event.dataTransfer?.files;
+    const filesReceived = event.dataTransfer!.files;
 
     this.verifyQntFiles(filesReceived?.length);
+    this.verifyTypeFile(filesReceived[0]);
+    this.emitImage(URL.createObjectURL(filesReceived[0]));
     this.dragToggle();
   }
 
-  public verifyQntFiles(filesReceived?: number) {
+  public verifyQntFiles(qntFilesReceived?: number) {
 
-    if (!(filesReceived == this.limitFiles)) {
+    if (!(qntFilesReceived == this.limitFiles)) {
       const messageError = `Apenas ${this.limitFiles} deve(m) ser inserido(s)`;
+      alert(messageError);
+      throw new Error(messageError);
+    }
+  }
+
+  public verifyTypeFile(typeFileReceived:File) {
+
+    if (!(typeFileReceived.type.startsWith('image/'))) {
+      const messageError = `O arquivo deve ser uma imagem`;
       alert(messageError);
       throw new Error(messageError);
     }
@@ -45,6 +60,17 @@ export class MlbFormInputDroppableComponent {
 
   public draggedOverFile(event: DragEvent): void {
     event.preventDefault();
+  }
+
+  public emitImage(value:string){
+    this.selectImage!.emit(value);
+  }
+
+  public selectForInput(event:any){
+    const fileReceived = event.target.files[0];
+
+    this.verifyTypeFile(fileReceived);
+    this.emitImage(URL.createObjectURL(fileReceived));
   }
 
 }

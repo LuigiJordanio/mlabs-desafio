@@ -13,5 +13,5 @@
   <label [for]="name" class="mlb-button mlb-button--outline">
     Pesquisar imagens
   </label>
-  <input type="file" [id]="name" hidden #fileInput [multiple]="false" />
+  <input type="file" accept="image/*" (change)="selectForInput($event)" [id]="name" hidden #fileInput [multiple]="false" />
 </label>

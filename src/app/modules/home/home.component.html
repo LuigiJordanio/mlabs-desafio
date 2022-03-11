@@ -1,29 +1,7 @@
 <mlb-layout-header>
   <mlb-profile [mlb-profile]="profile"></mlb-profile>
 </mlb-layout-header>
-<div class="container" style="margin-top: 24px;">
-  <!-- <mlb-form-input-droppable [mlb-name]="'luigi'">
-    <p class="mlb-form-input-droppable__description">
-      Solte uma imagem aqui ou clique no botão abaixo
-    </p>
-  </mlb-form-input-droppable> -->
-
-  <!-- <mlb-post-instagram [mlb-post]="post[0]">
-
-  </mlb-post-instagram> -->
-
-  <mlb-post-linkedin [mlb-post]="post[0]">
-
-  </mlb-post-linkedin>
-
-  <!-- <mlb-form-textarea [mlb-name]="'teste'" [mlb-has-emoji]="true"></mlb-form-textarea> -->
-
-  <mlb-layout-footer>
-    <div class="container">
-      <div class="row">
-        <mlb-button>Cancelar</mlb-button>
-        <mlb-button>Cancelar</mlb-button>
-      </div>
-    </div>
-  </mlb-layout-footer>
+<div class="sch-home">
+    <img src="assets/img/other/home-image.svg" alt="" class="sch-home__hero">
+    <mlb-button [routerLink]="'/schedules/save'" [mlb-category]="'secondary'" [mlb-is-link]="true">Agendar post</mlb-button>
 </div>

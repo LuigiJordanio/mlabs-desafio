@@ -8,5 +8,5 @@
       <i class="fa-regular fa-bookmark mlb-post-instagram__footer__actions__like-comment__icon"></i>
     </div>
   </div>
-  <p class="mlb-post-instagram__footer__description">{{description}}</p>
+  <p class="mlb-post-instagram__footer__description">{{description || '' | truncate :80}}</p>
 </div>

@@ -6,7 +6,7 @@ import { MlbPostComponent } from './mlb-post/mlb-post.component';
 
 @NgModule({
   declarations: [MlbPostComponent],
-  imports: [CommonModule,  MlbPostInstagramModule,MlbPostLinkedinModule],
-  exports: [MlbPostComponent,MlbPostInstagramModule,MlbPostLinkedinModule],
+  imports: [CommonModule, MlbPostInstagramModule, MlbPostLinkedinModule],
+  exports: [MlbPostComponent, MlbPostInstagramModule, MlbPostLinkedinModule],
 })
-export class MlbPostsModule {}
+export class MlbPostsModule { }

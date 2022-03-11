@@ -1,5 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { MlbComponentsModule } from 'src/app/@shared/mlb-components/mlb-components.module';
+import { SharedModule } from 'src/app/@shared/shared.module';
 import { ScheduleListComponent } from './pages/schedule-list/schedule-list.component';
 import { ScheduleSaveComponent } from './pages/schedule-save/schedule-save.component';
 import { SchedulesRoutingModule } from './schedules-routing.module';
@@ -15,6 +17,8 @@ import { SchedulesComponent } from './schedules.component';
   ],
   imports: [
     CommonModule,
+    MlbComponentsModule,
+    SharedModule,
     SchedulesRoutingModule
   ]
 })

@@ -11,18 +11,20 @@ export class MlbFormDatePickerComponent implements OnInit {
 
   myDpOptions: IAngularMyDpOptions = {
     dateRange: false,
+    alignSelectorRight: true,
+    closeSelectorOnDateSelect: true,
     dateFormat: 'dd/mm'
   }
+
+  public value?:any;
 
   @Input('mlb-placeholder') placeholder?: string;
 
   @Required()
   @Input('mlb-name') name?: string;
 
-  @Required()
   @Input('mlb-id') id?: string;
 
-
-
   ngOnInit(): void { }
+
 }

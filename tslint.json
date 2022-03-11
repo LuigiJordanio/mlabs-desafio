@@ -140,12 +140,14 @@
       true,
       "attribute",
       "app",
+      "mlb",
       "camelCase"
     ],
     "component-selector": [
       true,
       "element",
       "app",
+      "mlb",
       "kebab-case"
     ]
   }

@@ -1,1 +1,22 @@
-<p>schedule-list works!</p>
+<div class="sch-schedules__list">
+  <div class="container">
+    <h1>Listagem de agendamentos</h1>
+    <mlb-table [mlb-headers]="headersTable">
+      <tr class="sch-schedules__list__container__tr" *ngFor="let post of posts">
+        <td >
+          <i class="fa-brands fa-{{social.icon}} icon" *ngFor="let social in post.social_network_key"></i>
+        </td>
+        <td><img [src]="post.media | safe" alt="" class="sch-schedules__list__image" /></td>
+        <td>{{ post.publication_date }}</td>
+        <td>{{ post.text }}</td>
+        <td><mlb-button (click)="showDetail(post)">Preview</mlb-button></td>
+        <td>{{ post.status_key }}</td>
+      </tr>
+    </mlb-table>
+  </div>
+</div>
+<div class="detail-post" *ngIf="activePost">
+  <mlb-post-linkedin [mlb-post]="activePost" *ngIf="getHasSocialSelected(activePost,'Linkedin')"></mlb-post-linkedin>
+  <mlb-post-instagram [mlb-post]="activePost" *ngIf="getHasSocialSelected(activePost,'Instagram')"></mlb-post-instagram>
+
+</div>

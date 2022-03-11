@@ -8,7 +8,9 @@ import { typeInput } from '../mlb-form.types';
 })
 export class MlbFormInputComponent implements OnInit {
 
+  constructor() { }
 
+  @Input('mlb-value') value: typeInput = 'text';
 
   @Input('mlb-type') type: typeInput = 'text';
 

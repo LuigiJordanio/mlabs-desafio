@@ -1,0 +1,29 @@
+.mlb-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid $black-lighter-2;
+
+  &__tr {
+    border: 1px solid $black-lighter-2;
+    background-color: $white-full-lighter;
+
+    &__td,
+    &__th {
+      min-width: 128px;
+      border: 1px solid $black-lighter-2;
+      height: 64px;
+      align-items: center;
+      padding: 24px;
+      box-sizing: border-box;
+    }
+
+    &__th {
+      text-align: center;
+      background-color: $white-full-lighter;
+    }
+
+    &:nth-child(odd) {
+      background-color: #f2f2f2;
+    }
+  }
+}

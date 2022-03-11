@@ -30,7 +30,7 @@ import { MlbTablesModule } from './mlb-tables/mlb-tables.module';
     MlbPostsModule,
     MlbProfilesModule,
     MlbStatusesModule,
-    MlbTablesModule
+    MlbTablesModule,
   ]
 })
 export class MlbComponentsModule { }

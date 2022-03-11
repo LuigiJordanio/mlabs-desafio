@@ -1,10 +1,8 @@
 <i
-  class="fa-brands mlb-button-social mlb-button-social--{{
-    isDisabled ? 'disabled' : 'enabled'
-  }}
-  {{ !isDisabled && isSelected ? 'mlb-button-social--selected' : '' }}
+  class="fa-brands mlb-button-social mlb-button-social--{{socialNetwork.status}}
+  {{ !(socialNetwork.status == 'disabled') && isSelected ? 'mlb-button-social--selected' : '' }}
 
-  {{ (!isDisabled && !isSelected) ? 'mlb-button-social--unselected': ''}}
+  {{ (!(socialNetwork.status == 'disabled') && !isSelected) ? 'mlb-button-social--unselected': ''}}
 
-  fa-{{ socialNetwork }}"
+  fa-{{ socialNetwork.icon }}"
 ></i>

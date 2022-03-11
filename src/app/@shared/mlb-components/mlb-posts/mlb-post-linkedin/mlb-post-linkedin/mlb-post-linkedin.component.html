@@ -1,8 +1,8 @@
 <div class="mlb-post-linkedin">
   <mlb-post-linkedin-header
-    [mlb-name]="post.profileName"
-    [mlb-date]="post.date"
-    [mlb-description]="post.description"
+    [mlb-name]="nameProfile"
+    [mlb-date]="post.publication_date"
+    [mlb-description]="post.text"
   ></mlb-post-linkedin-header>
   <div
     class="mlb-post-linkedin__container mlb-post-linkedin__container--{{
@@ -10,12 +10,12 @@
     }}"
   >
     <img
-      [src]="post.imageUrl"
+      [src]="post.media | safe"
       alt
       class="mlb-post-linkedin__container--{{ size }}__image"
     />
   </div>
   <mlb-post-linkedin-footer
-    [mlb-qnt-comment]="post.qntComment"
+    [mlb-qnt-comment]="5"
   ></mlb-post-linkedin-footer>
 </div>

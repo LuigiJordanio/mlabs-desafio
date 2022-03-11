@@ -31,4 +31,14 @@
     background-color: $white-full-lighter;
     border: 1px solid $brand-blue-standard;
   }
+
+  &:disabled{
+    border-color: $gray-lighter-1;
+    background-color: $gray-lighter-2;
+    background: $gray-lighter-2;
+    color: $gray-dark-1;
+    cursor: not-allowed;
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: initial;
+  }
 }

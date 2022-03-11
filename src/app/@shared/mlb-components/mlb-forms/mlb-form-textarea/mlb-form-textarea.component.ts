@@ -1,5 +1,4 @@
 import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
-import { Required } from 'src/app/@shared/decorators/required.decorator';
 import { Emoji } from '../mlb-form.types';
 
 @Component({
@@ -10,8 +9,9 @@ import { Emoji } from '../mlb-form.types';
 export class MlbFormTextareaComponent implements OnInit {
 
 
-  @Required()
   @Input('mlb-name') name!: string;
+
+  public value!: string;
 
   @Input('mlb-placeholder') placeholder?: string;
 
@@ -33,7 +33,7 @@ export class MlbFormTextareaComponent implements OnInit {
   }
 
   public selectEmoji({ emoji: { native } }: Emoji) {
-    this.textarea.nativeElement.value += native;
+    this.value = this.textarea.nativeElement.value + native;
     this.emitEmoji?.emit(native);
   }
 

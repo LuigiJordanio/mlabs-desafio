@@ -1,8 +1,13 @@
-.mlb-layout-header{
+.mlb-layout-header {
   background-color: $white-full-lighter;
   width: 100%;
   height: 80px;
   align-items: center;
   display: flex;
 
+  .container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
 }

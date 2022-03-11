@@ -1,4 +1,4 @@
-export interface Profile{
+export interface ProfileComponent{
   name:string;
   image?:string;
 }

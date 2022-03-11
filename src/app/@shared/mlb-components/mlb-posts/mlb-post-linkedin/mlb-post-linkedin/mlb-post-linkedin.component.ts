@@ -1,7 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Required } from 'src/app/@shared/decorators/required.decorator';
+import { ProfileService } from 'src/app/@shared/services/profile.service';
+import { Post } from 'src/app/@shared/types/post.types';
 import { sizesPost } from '../../mlb-post.types';
-import { Post } from './../../mlb-post.types';
 
 @Component({
   selector: 'mlb-post-linkedin',
@@ -10,6 +11,7 @@ import { Post } from './../../mlb-post.types';
 })
 export class MlbPostLinkedinComponent implements OnInit {
 
+  public nameProfile!:string;
 
   @Input('mlb-size') size:sizesPost = 'standard';
 
@@ -18,10 +20,9 @@ export class MlbPostLinkedinComponent implements OnInit {
 
   @Input('mlb-qnt-comments') qntComments?:number;
 
-
-
+  constructor(private profileService: ProfileService){}
 
   ngOnInit(): void {
+    this.nameProfile = this.profileService.profile.name;
   }
-
 }

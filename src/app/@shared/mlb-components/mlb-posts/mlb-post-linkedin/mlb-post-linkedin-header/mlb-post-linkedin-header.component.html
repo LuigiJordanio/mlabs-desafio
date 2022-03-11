@@ -7,6 +7,6 @@
     </div>
   </div>
   <p class="mlb-post-linkedin__header__description">
-    {{description}}
+    {{description || '' | truncate : 85}}
   </p>
 </div>

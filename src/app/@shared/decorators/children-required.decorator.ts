@@ -8,20 +8,10 @@ export function ChildrenRequired(warnOptional?: boolean) {
 
     target[NG_AFTER_VIEW_INIT] = function () {
 
-      if (!this[key].nativeElement.innerText && !warnOptional) {
+      if (!this[key].nativeElement.innerText) {
         throw new Error(`O componente precisa de conteudo interno`);
       }
 
-      if (!this[key].nativeElement.innerText && warnOptional) {
-        let parentComponentElement = this.content.nativeElement.parentElement;
-
-        while(!parentComponentElement.tagName.toLowerCase().startsWith('mlb-'))
-          parentComponentElement = parentComponentElement.parentElement;
-
-        const componentName = parentComponentElement.tagName.toLowerCase();
-
-        consoleLogService.warning(`O componente ${componentName} está sem conteudo`);
-      }
     };
   };
 }

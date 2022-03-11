@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Required } from 'src/app/@shared/decorators/required.decorator';
+import { HeadersTable } from '../mlb-table.types';
 
 @Component({
   selector: 'mlb-table',
@@ -7,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MlbTableComponent implements OnInit {
 
-
+  @Required()
+  @Input('mlb-headers') headers!:HeadersTable[];
 
   ngOnInit(): void {
   }
