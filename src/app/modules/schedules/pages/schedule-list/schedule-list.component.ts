@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { HeadersTable } from 'src/app/@shared/mlb-components/mlb-tables/mlb-table.types';
 import { PostService } from 'src/app/@shared/services/post.service';
 import { Post } from 'src/app/@shared/types/post.types';
@@ -34,22 +34,38 @@ export class ScheduleListComponent implements OnInit {
   ]
 
   public posts?: Post[];
-  public activePost?:Post;
+
+  public activePost?: Post;
+
+  public positionModal = {
+    x: 0,
+    y: 0
+  }
+
+  @ViewChild('detailModal')  detailModal?:ElementRef;
 
   public constructor(private postService: PostService) { }
 
-  ngOnInit() : void {
+  ngOnInit(): void {
     this.posts = this.postService.listFormat();
   }
 
-  public showDetail(post:any){
-    this.activePost = post;
+  public showDetail(post: Post,event:MouseEvent): void {
+    console.log(event)
+
+    if(this.activePost == post){
+      this.activePost = undefined;
+      return;
+    }
+      this.activePost = post;
+      this.positionModal.x = event.pageX;
+      this.positionModal.y = event.pageY + 150;
   }
 
 
-  public getHasSocialSelected(post: any, social:string): boolean {
+  public getHasSocialSelected(post: any, social: string): boolean {
     console.log(post)
-    return post.social_network_key.some((select:any) => select.name == social)
+    return post.social_network_key.some((select: any) => select.name == social)
   }
 
 }

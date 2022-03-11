@@ -14,8 +14,8 @@ export class SocialNetworkService {
     this.socialNetworks = (socialNetoworks as SocialNetworkDto).default?.data;
   }
 
-  public get(id:any):SocialNetwork[] | undefined {
-    return this.socialNetworks?.filter((social) => social.id === id || id?.includes(social.id));
+  public get(id:any):SocialNetwork[] {
+    return this.socialNetworks?.filter((social) => social.id === id || id?.includes(social.id)) || [];
   }
 
   public getSortedEnabled() {

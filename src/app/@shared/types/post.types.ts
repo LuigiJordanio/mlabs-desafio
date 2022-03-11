@@ -1,9 +1,8 @@
 import { SafeUrl } from "@angular/platform-browser";
-import { SocialNetwork } from "./socialNetwork.types";
 
 export interface Post {
   id?:number;
-  social_network_key?:number[] | SocialNetwork[];
+  social_network_key:any;
   media:string | SafeUrl;
   text:string;
   publication_date:string | Date;

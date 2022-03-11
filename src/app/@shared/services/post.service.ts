@@ -34,7 +34,7 @@ export class PostService {
       return {
         ...post,
         post: new Date(post.publication_date).toLocaleDateString(),
-        social_network_key: this.socialNetworkService.get(post.social_network_key)
+        social_network_key: this.socialNetworkService.get(post.social_network_key) ?? []
       };
     })
   }
