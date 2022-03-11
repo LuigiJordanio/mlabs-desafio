@@ -28,4 +28,4 @@ Infelizmente não consegui finalizar a parte da documentação, mas se quiserem 
 ## Demo application
 
 For see the application working access the link <br>
-[http://shopventory-front-end-code-challenge.s3-website.us-east-2.amazonaws.com/](http://shopventory-front-end-code-challenge.s3-website.us-east-2.amazonaws.com/)
+[https://mlabs-desafio.s3.us-east-2.amazonaws.com/home](https://mlabs-desafio.s3.us-east-2.amazonaws.com/home)
