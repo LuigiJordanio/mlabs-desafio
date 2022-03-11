@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { MlbButtonsModule } from './mlb-buttons/mlb-buttons.module';
 import { MlbCardsModule } from './mlb-cards/mlb-cards.module';
 import { MlbFormsModule } from './mlb-forms/mlb-forms.module';
@@ -20,6 +21,7 @@ import { MlbTablesModule } from './mlb-tables/mlb-tables.module';
     MlbPostsModule,
     MlbProfilesModule,
     MlbStatusesModule,
+    RouterModule,
     MlbTablesModule
   ],
   exports: [
