@@ -10,6 +10,9 @@ import { MlbProfileComponent } from './mlb-profile/mlb-profile.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    MlbProfileComponent
   ]
 })
 export class MlbProfilesModule { }

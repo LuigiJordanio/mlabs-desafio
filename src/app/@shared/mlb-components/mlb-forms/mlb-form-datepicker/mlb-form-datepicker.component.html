@@ -1,0 +1,15 @@
+<label class="mlb-form-datepicker mlb-form-input" for="mydate" >
+  <i class="fa-solid fa-calendar"></i>
+  <input
+  class="input-box mlb-form-input__input"
+  placeholder="DD/MM"
+  angular-mydatepicker
+  [(ngModel)]="value"
+  name="mydate"
+  id="mydate"
+  (click)="dp.toggleCalendar()"
+  [options]="myDpOptions"
+  #dp="angular-mydatepicker"
+  aria-labelledby="mydate"
+/>
+</label>

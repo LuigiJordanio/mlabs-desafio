@@ -1,1 +1,8 @@
-<p>mlb-button-social works!</p>
+<i
+  class="fa-brands mlb-button-social mlb-button-social--{{socialNetwork.status}}
+  {{ !(socialNetwork.status == 'disabled') && isSelected ? 'mlb-button-social--selected' : '' }}
+
+  {{ (!(socialNetwork.status == 'disabled') && !isSelected) ? 'mlb-button-social--unselected': ''}}
+
+  fa-{{ socialNetwork.icon }}"
+></i>

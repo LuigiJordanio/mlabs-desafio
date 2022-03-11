@@ -1,1 +1,12 @@
-<p>mlb-post-instagram-footer works!</p>
+<div class="mlb-post-instagram__footer">
+  <div class="mlb-post-instagram__footer__actions">
+    <div class="mlb-post-instagram__footer__actions__like-comment">
+      <i class="fa-regular fa-heart mlb-post-instagram__footer__actions__like-comment__icon"></i>
+      <i class="fa-regular fa-comment mlb-post-instagram__footer__actions__like-comment__icon"></i>
+    </div>
+    <div class="mlb-post-instagram__footer__actions__like-comment">
+      <i class="fa-regular fa-bookmark mlb-post-instagram__footer__actions__like-comment__icon"></i>
+    </div>
+  </div>
+  <p class="mlb-post-instagram__footer__description">{{description || '' | truncate :80}}</p>
+</div>

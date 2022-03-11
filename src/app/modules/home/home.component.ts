@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ProfileService } from 'src/app/@shared/services/profile.service';
+import { Profile } from 'src/app/@shared/types/profile.types';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  public profile!:Profile;
 
-  ngOnInit(): void {
+  constructor(private profileService:ProfileService){
+
   }
-
+  ngOnInit(): void {
+    this.profile = this.profileService.profile;
+  }
 }

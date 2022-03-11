@@ -1,57 +1,52 @@
+$white-background-lighter-1: #f8f8f8;
+$white-background-standard: #d6d8e0;
+$white-full-lighter: #ffffff;
 
-$white-background-lighter-1:#f8f8f8;
-$white-background-standard:#D6D8E0;
-$white-full-lighter:#ffffff;
+$gray-lighter-3: #e0e0e0;
+$gray-lighter-2: #dddddd;
+$gray-lighter-1: #9e9e9e;
+$gray-standard: #949494;
+$gray-dark-1: #989898;
+$gray-dark-2: #4f4f4f;
 
+$black-lighter-2: #bdbdbd;
+$black-lighter-1: #333333;
+$black-full-dark: #000000;
 
-$gray-lighter-3:#E0E0E0;
-$gray-lighter-2:#DDDDDD;
-$gray-lighter-1:#9E9E9E;
-$gray-standard:#949494;
-$gray-dark-1:#989898;
-$gray-dark-2:#4F4F4F;
+$brand-orange-lighter-1: #fff3e0;
+$brand-orange-standard: #f2994a;
+$brand-orange-dark-1: #e0812c;
+$brand-orange-dark-2: #ef9f2e;
 
-$black-lighter-1:#333333;
-$black-full-dark:#000000;
+$brand-blue-standard: #2f80ed;
 
-$brand-orange-lighter-1:#FFF3E0;
-$brand-orange-standard:#F2994A;
-$brand-orange-dark-1:#E0812C;
+$social-linkedin-blue-standard: #2e92ef;
 
-$brand-blue-standard:#2F80ED;
+$social-instagram-pink: #ef2ea2;
+$social-instagram-orange: #e0a22b;
 
-$social-linkedin-blue-standard:#2E92EF;
-
-$social-instagram-pink:#EF2EA2;
-$social-instagram-orange:#E0A22B;
-
-$social-instagram-gradient:linear-gradient(187.5deg, $social-instagram-pink 5.81%, $social-instagram-orange 109.34%);
-
-$map-colors-solid:(
-
-  'white-background-lighter-1':$white-background-lighter-1,
-  'white-background-standard':$white-background-standard,
-  'white-full-lighter':$white-full-lighter,
-
-  'gray-lighter-3':$gray-lighter-3,
-  'gray-lighter-2':$gray-lighter-2,
-  'gray-lighter-1':$gray-lighter-1,
-  'gray-standard':$gray-standard,
-
-  'gray-dark-1':$gray-dark-1,
-  'gray-dark-2':$gray-dark-2,
-
-  'black-lighter-1':$black-lighter-1,
-  'black-full-dark':$black-full-dark,
-
-  'brand-orange-lighter-1':$brand-orange-lighter-1,
-  'brand-orange-standard':$brand-orange-standard,
-  'brand-orange-dark-1':$brand-orange-dark-1,
-
-  'brand-blue-standard':$brand-blue-standard,
-
-  'social-linkedin-blue-standard':$social-linkedin-blue-standard,
-
-  'social-instagram-gradient':$social-instagram-gradient
+$social-instagram-gradient: linear-gradient(
+  187.5deg,
+  $social-instagram-pink 5.81%,
+  $social-instagram-orange 109.34%
 );
 
+$map-colors-solid: (
+  "white-background-lighter-1": $white-background-lighter-1,
+  "white-background-standard": $white-background-standard,
+  "white-full-lighter": $white-full-lighter,
+  "gray-lighter-3": $gray-lighter-3,
+  "gray-lighter-2": $gray-lighter-2,
+  "gray-lighter-1": $gray-lighter-1,
+  "gray-standard": $gray-standard,
+  "gray-dark-1": $gray-dark-1,
+  "gray-dark-2": $gray-dark-2,
+  "black-lighter-1": $black-lighter-1,
+  "black-full-dark": $black-full-dark,
+  "brand-orange-lighter-1": $brand-orange-lighter-1,
+  "brand-orange-standard": $brand-orange-standard,
+  "brand-orange-dark-1": $brand-orange-dark-1,
+  "brand-blue-standard": $brand-blue-standard,
+  "social-linkedin-blue-standard": $social-linkedin-blue-standard,
+  "social-instagram-gradient": $social-instagram-gradient,
+);

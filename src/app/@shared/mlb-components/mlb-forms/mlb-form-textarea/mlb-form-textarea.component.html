@@ -1,1 +1,15 @@
-<p>mlb-form-textarea works!</p>
+<div class="mlb-form-textarea ">
+  <textarea
+    [name]="name"
+    [id]="name"
+    cols="30"
+    rows="10"
+    class="mlb-form-textarea__textarea"
+    #textarea
+    [(ngModel)]="value"
+  ></textarea>
+  <div class="mlb-form-textarea__emoji">
+    <i class="fa-solid fa-face-grin-wide mlb-form-textarea__emoji__icon" (click)="toggleEmojiWindow()" *ngIf="hasEmoji"></i>
+    <emoji-mart (emojiSelect)="selectEmoji($event)" *ngIf="emojiWindowsIsOpen"></emoji-mart>
+  </div>
+</div>

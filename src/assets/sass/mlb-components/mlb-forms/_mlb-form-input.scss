@@ -1,0 +1,23 @@
+.mlb-form-input {
+  display: flex;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid $gray-lighter-1;
+  height: 42px;
+  align-items: center;
+  width: 124px;
+  color: $gray-lighter-1;
+  padding: 0 12px;
+  gap: 10px;
+  cursor: pointer;
+  position: relative;
+  &__input {
+    color: $gray-lighter-1;
+    width: 100%;
+    cursor: pointer;
+
+    &::-webkit-calendar-picker-indicator {
+      display: none;
+    }
+  }
+}

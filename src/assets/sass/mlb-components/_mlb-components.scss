@@ -6,3 +6,10 @@
 @import "mlb-profiles/mlb-profiles";
 @import "mlb-statuses/mlb-statuses";
 @import "mlb-tables/mlb-tables";
+
+
+._mlb-post-instagram{
+  &__header{
+    display: flex;
+  }
+}

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Required } from 'src/app/@shared/decorators/required.decorator';
+import { ProfileComponent } from '../mlb-profile.types';
 
 @Component({
   selector: 'mlb-profile',
@@ -7,7 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MlbProfileComponent implements OnInit {
 
-  constructor() { }
+
+
+  @Required()
+  @Input('mlb-profile') profile!:ProfileComponent;
 
   ngOnInit(): void {}
 

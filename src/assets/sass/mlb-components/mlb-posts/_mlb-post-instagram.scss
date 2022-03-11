@@ -1,0 +1,77 @@
+.mlb-post-instagram {
+  width: 368px;
+  background-color: $white-full-lighter;
+  border: 1px solid $black-lighter-2;
+  border-radius: 4px;
+
+  &__header {
+    display: flex;
+    padding: 16px;
+    align-items: center;
+    gap: 8px;
+
+    &__name{
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 21px;
+      color: $black-full-dark;
+    }
+  }
+
+  &__container {
+    width: 100%;
+
+    &--standard {
+      height: 368px;
+
+      &__image {
+        height: 368px;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+
+    &--small {
+      height: 240px;
+      &__image {
+        height: 240px;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+
+    &__actions{
+      padding: 8px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &__like-comment{
+        display: flex;
+        gap: 8px;
+
+        &__icon{
+          font-size: 24px;
+          color: $gray-dark-2;
+        }
+      }
+    }
+
+    &__description{
+      padding:16px;
+      padding-top:8px;
+      color: $gray-dark-2;
+      font-weight: 500;
+      font-size: 14px;
+      word-break: break-all;
+    }
+  }
+}

@@ -1,1 +1,7 @@
-<p>home works!</p>
+<mlb-layout-header>
+  <mlb-profile [mlb-profile]="profile"></mlb-profile>
+</mlb-layout-header>
+<div class="sch-home">
+    <img src="assets/img/other/home-image.svg" alt="" class="sch-home__hero">
+    <mlb-button [routerLink]="'/schedules/save'" [mlb-category]="'secondary'" [mlb-is-link]="true">Agendar post</mlb-button>
+</div>

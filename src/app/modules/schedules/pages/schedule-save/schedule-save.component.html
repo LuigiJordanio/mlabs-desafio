@@ -1,1 +1,92 @@
-<p>schedule-save works!</p>
+<div class="sch-schedules__container__save">
+  <mlb-card
+    mlb-title="Redes sociais"
+    class="sch-schedules__container__save__redes-sociais"
+  >
+    <ul class="sch-schedules__container__save__redes-sociais__list-social">
+      <li *ngFor="let social of socialNetworks">
+        <mlb-button-social
+          [mlb-social-network]="social"
+          [mlb-seleted]="socialSelecteds.indexOf(social) > -1"
+          (click)="selectSocial(social)"
+        ></mlb-button-social>
+      </li>
+    </ul>
+  </mlb-card>
+  <mlb-card
+    mlb-title="Data de publicação"
+    class="sch-schedules__container__save__data-publicacao"
+  >
+    <div class="sch-schedules__container__save__data-publicacao__form">
+      <mlb-form-datepicker
+        #date
+        mlb-id="date"
+        mlb-name="date"
+      ></mlb-form-datepicker>
+      <mlb-form-input
+        #time
+        mlb-type="time"
+        mlb-id="time"
+        mlb-icon="fa-clock"
+      ></mlb-form-input>
+    </div>
+  </mlb-card>
+  <mlb-card
+    mlb-title="Texto do post"
+    class="sch-schedules__container__save__texto-post"
+  >
+    <mlb-form-textarea #description></mlb-form-textarea>
+  </mlb-card>
+  <mlb-card
+    mlb-title="Upload de image"
+    class="sch-schedules__container__save__upload-image"
+  >
+    <mlb-form-input-droppable
+      [mlb-name]="'image'"
+      (mlb-select-image)="droppedImage($event)"
+    >
+      <p>{{ statusImagem }}</p>
+    </mlb-form-input-droppable>
+  </mlb-card>
+  <mlb-card
+    mlb-title="Visualização do post"
+    class="sch-schedules__container__save__visualizacao-post"
+  >
+    <div
+      class="sch-schedules__container__save__visualizacao-post__list-posts"
+      *ngIf="post.media && socialSelecteds.length"
+    >
+      <mlb-post-linkedin
+        [mlb-post]="post"
+        *ngIf="getHasTypeSocialSelecteds('Linkedin')"
+      ></mlb-post-linkedin>
+      <mlb-post-instagram
+        [mlb-post]="post"
+        *ngIf="getHasTypeSocialSelecteds('Instagram')"
+      ></mlb-post-instagram>
+    </div>
+    <div
+      class="sch-schedules__container__save__visualizacao-post__empty"
+      *ngIf="!post.media || !socialSelecteds.length"
+    >
+      <p
+        class="sch-schedules__container__save__visualizacao-post__empty__paragraph"
+      >
+        Aguardando conteúdo. Informe os canais e as mídias desejadas para
+        visualização.
+      </p>
+      <img src="assets/img/default/post.png" alt="" />
+    </div>
+  </mlb-card>
+</div>
+
+
+<mlb-layout-footer>
+  <div class="container">
+    <div class="row">
+      <mlb-button >Cancelar</mlb-button>
+      <mlb-button mlb-category="outline" [mlb-disabled]="postIsValid()">Salvar Rascunho</mlb-button>
+      <mlb-button mlb-category="primary" [mlb-disabled]="postIsValid()" (click)="salvarPost()" [mlb-is-loading]="isLoading">Agendar</mlb-button>
+    </div>
+  </div>
+</mlb-layout-footer>

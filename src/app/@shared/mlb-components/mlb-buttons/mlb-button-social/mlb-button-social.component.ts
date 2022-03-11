@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { socialNetworkButton } from '../mlb-button.types';
 
 @Component({
   selector: 'mlb-button-social',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MlbButtonSocialComponent implements OnInit {
 
-  constructor() { }
+
+  @Input('mlb-social-network') socialNetwork!:socialNetworkButton;
+
+  @Input('mlb-seleted') isSelected:boolean = false;
+
+  public status!:string;
+
+
 
   ngOnInit(): void {
+
+
   }
 
 }

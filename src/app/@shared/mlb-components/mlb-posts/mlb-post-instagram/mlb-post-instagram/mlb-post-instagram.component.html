@@ -1,1 +1,7 @@
-<p>mlb-post-instagram works!</p>
+<div class="mlb-post-instagram">
+  <mlb-post-instagram-header [mlb-name]="nameProfile"></mlb-post-instagram-header>
+  <div class="mlb-post-instagram__container mlb-post-instagram__container--{{size}}">
+    <img [src]="post.media | safe " alt="" class="mlb-post-instagram__container--{{size}}__image">
+  </div>
+  <mlb-post-instagram-footer [mlb-description]="post.text"></mlb-post-instagram-footer>
+</div>

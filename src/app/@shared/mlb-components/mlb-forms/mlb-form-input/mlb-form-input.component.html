@@ -1,1 +1,4 @@
-<p>mlb-form-input works!</p>
+<label class="mlb-form-input" [for]="id || name" >
+  <i class="fa-solid  {{icon}}" *ngIf="icon"></i>
+  <input [type]="type" [(ngModel)]="value" class="mlb-form-input__input" [placeholder]="placeholder" [id]="id || name">
+</label>

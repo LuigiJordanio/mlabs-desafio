@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'mlb-post-linkedin-header',
@@ -7,7 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MlbPostLinkedinHeaderComponent implements OnInit {
 
-  constructor() { }
+
+  @Input('mlb-name') name!:string;
+
+  @Input('mlb-date') date!:Date | string;
+
+  @Input('mlb-description') description?:string;
 
   ngOnInit(): void {
   }

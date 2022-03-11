@@ -1,1 +1,49 @@
-<p>schedule-list works!</p>
+<div class="sch-schedules__list">
+  <mlb-card
+    [mlb-title]="'Visualização do post'"
+    class="detail-post"
+    *ngIf="activePost"
+    [ngStyle]="{
+      left: positionModal.x - 500 + 'px',
+      top: positionModal.y - 125 + 'px',
+      position: 'absolute'
+    }"
+  >
+    <mlb-post-linkedin
+      [mlb-post]="activePost"
+      *ngIf="getHasSocialSelected(activePost, 'Linkedin')"
+      [mlb-size]="'small'"
+    ></mlb-post-linkedin>
+    <mlb-post-instagram
+      [mlb-post]="activePost"
+      *ngIf="getHasSocialSelected(activePost, 'Instagram')"
+      [mlb-size]="'small'"
+    ></mlb-post-instagram>
+  </mlb-card>
+  <div class="container">
+    <h1 class="schedules__list__title">Listagem de agendamentos</h1>
+    <mlb-table [mlb-headers]="headersTable">
+      <tr class="sch-schedules__list__container__tr" *ngFor="let post of posts">
+        <td>
+          <i
+            *ngFor="let social of post.social_network_key"
+            class="fa-brands fa-{{ social!.icon }} icon"
+          ></i>
+        </td>
+        <td>
+          <img
+            [src]="post.media | safe"
+            alt=""
+            class="sch-schedules__list__image"
+          />
+        </td>
+        <td>{{ post.publication_date | date }}</td>
+        <td>{{ post.text }}</td>
+        <td>
+          <mlb-button (click)="showDetail(post, $event)">Preview</mlb-button>
+        </td>
+        <td><mlb-status [mlb-status]="post.status_key"></mlb-status></td>
+      </tr>
+    </mlb-table>
+  </div>
+</div>

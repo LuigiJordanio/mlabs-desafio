@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MlbPostComponent implements OnInit {
 
-  constructor() { }
+
 
   ngOnInit(): void {
   }

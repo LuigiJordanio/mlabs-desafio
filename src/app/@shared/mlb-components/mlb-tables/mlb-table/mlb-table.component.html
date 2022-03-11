@@ -1,1 +1,10 @@
-<p>mlb-table works!</p>
+<table class="mlb-table">
+  <thead>
+    <tr class="mlb-table__tr">
+      <th *ngFor="let header of headers" class="mlb-table__tr__th {{header.cssClassAdditions}}">{{header.label}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-content></ng-content>
+  </tbody>
+</table>
