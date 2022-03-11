@@ -2,6 +2,7 @@ import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
 import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
 import { ConsoleLogService } from './@shared/services/console-log.service';
 import { PostService } from './@shared/services/post.service';
 import { AppRoutingModule } from './app-routing.module';
@@ -15,7 +16,8 @@ registerLocaleData(localePt);
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule
   ],
   providers: [
     ConsoleLogService,
